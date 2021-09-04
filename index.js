@@ -508,6 +508,7 @@
             // Mode 10:
 
             // Team name labels
+            console.log(game);
             console.log(game.hasOwnProperty('team1Name'));
             console.log(game.hasOwnProperty('team2Name'));
             console.log(game.hasOwnProperty('team3Name'));
