@@ -339,6 +339,8 @@
             var leagueHead = document.getElementById('seed-table-league-'+iLp1+'-name');
             var leagueName = leagues[iL];
             leagueHead.innerHTML = leagueName;
+            console.log(leagueName);
+            console.log(seedsApiResult);
             var leagueSeedList = seedsApiResult[leagueName];
 
             // Populate seeds with the team name and win-loss record
