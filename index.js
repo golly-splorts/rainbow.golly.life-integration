@@ -339,8 +339,6 @@
             var leagueHead = document.getElementById('seed-table-league-'+iLp1+'-name');
             var leagueName = leagues[iL];
             leagueHead.innerHTML = leagueName;
-            console.log(leagueName);
-            console.log(seedsApiResult);
             var leagueSeedList = seedsApiResult[leagueName];
 
             // Populate seeds with the team name and win-loss record
@@ -350,8 +348,13 @@
 
               var seedTeamObject = leagueSeedList[iSeed];
               var seedTeamName = seedTeamObject['teamName'];
-              var seedTeamRecord = seedTeamObject['teamW23L'];
-              var seedTeamRecordStr = "(" + seedTeamRecord[0] + "-" + seedTeamRecord[1] + ")";
+              // TODO: This is a bug in gollyx-mongo,
+              // rainbow seed getter class,
+              // this field should be teamW23L
+              // but is actually the old teamWinLoss
+              //var seedTeamRecord = seedTeamObject['teamW23L'];
+              var seedTeamRecord = seedTeamObject['teamWinLoss'];
+              var seedTeamRecordStr = "(" + seedTeamRecord[0] + "-" + seedTeamRecord[1] + "-" + seedTeamRecord[2] + "-" + seedTeamRecord[3] + ", " + (11*seedTeamRecord[0] + 7*seedTeamRecord[1] + 3*seedTeamRecord[2]) + "🌈)";
 
               var nameElemId = 'league-'+iLp1+'-seed-'+iSp1;
               var nameElem = document.getElementById(nameElemId);
