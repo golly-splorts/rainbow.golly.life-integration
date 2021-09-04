@@ -351,6 +351,9 @@
               var seedTeamRecord = seedTeamObject['teamWinLoss'];
               var seedTeamRecordStr = "(" + seedTeamRecord[0] + "-" + seedTeamRecord[1] + ")";
 
+              console.log('debugging');
+              console.log(seedTeamRecordStr);
+
               var nameElemId = 'league-'+iLp1+'-seed-'+iSp1;
               var nameElem = document.getElementById(nameElemId);
 
