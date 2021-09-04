@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<meta charset="utf-8">
+<html lang="en">
+<head>
+
+    <title>GollyX456</title>
+    <meta charset="utf-8" />
+
+    <script>
+var baseUIUrl  = 'https://rainbow.integration.golly456.life';
+var baseApiUrl = 'https://cloud.rainbow.golly456.life';
+var mapsApiUrl = 'https://maps.golly456.life';
+    </script>
+
+    <!--
+    CSS styles
+    -->
+    <link href="https://rainbow.integration.golly456.life/theme/css/slate.css"  rel="stylesheet" type="text/css">
+    <link href="https://rainbow.integration.golly456.life/theme/css/custom.css" rel="stylesheet" type="text/css">
+    <link href="https://rainbow.integration.golly456.life/theme/css/fa.css"     rel="stylesheet" type="text/css"/>
+
+    <link rel="icon" type="image/png" href="https://rainbow.integration.golly456.life/theme/img/golly-favicon.png">
+
+    <!--
+        Versions:
+        gollyx-toroidal-pelican: 
+        gollyx-toroidal-pelican-theme: 24.0.0
+    -->
+
+
+</head>
+<body id="index">
+
+<!-- Navigation -->
+<div id="navbar-div-top-level" class="navbar navbar-expand-md fixed-top navbar-dark bg-primary">
+
+  <div id="navbar-div-container" class="container">
+
+    <a href="https://rainbow.integration.golly456.life/" class="navbar-brand">
+      <img class="navbar-brand-logo" type="image/png" width="25px" src="https://rainbow.integration.golly456.life/theme/img/rainbow-cup.png" alt="logo" />
+      GollyX456
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- this is the non-brand portion of the nav bar -->
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+
+      <!-- begin list of navbar buttons -->
+      <ul class="navbar-nav">
+
+        <!--
+        pages order:
+        - home
+        - season*
+        - postseason*
+        - league
+        - maps
+        -->
+
+        <!-- seasons -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">
+              Season <span class="caret"></span>
+          </a>
+          <div id="navbar-season-dropdown-menu" class="dropdown-menu" aria-labelledby="themes">
+            <!--
+            <a class="dropdown-item" href="https://rainbow.integration.golly456.life/season.html">Season 1</a>
+            -->
+          </div>
+        </li>
+
+        <!-- postseasons -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">
+              Postseason <span class="caret"></span>
+          </a>
+          <div id="navbar-postseason-dropdown-menu" class="dropdown-menu" aria-labelledby="themes">
+            <!--
+            <a class="dropdown-item" href="https://rainbow.integration.golly456.life/postseason.html">Season 1</a>
+            -->
+          </div>
+        </li>
+
+        <!-- league -->
+        <li class="nav-item">
+          <a class="nav-link" href="https://rainbow.integration.golly456.life/league.html">Standings</a>
+        </li>
+
+        <!-- explore -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">
+              Teams<span class="caret"></span>
+          </a>
+          <div id="navbar-explore-dropdown-menu" class="dropdown-menu" aria-labelledby="themes">
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Alewife_Arsonists">Alewife Arsonists</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Albuquerque_Solarpunks">Albuquerque Solarpunks</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Boylston_Boogers">Boylston Boogers</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Baltimore_Texas">Baltimore Texas</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Delaware_Corporate_Shells">Delaware Corporate Shells</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Detroit_Grape_Chews">Detroit Grape Chews</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Elko_Astronauts">Elko Astronauts</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Ft._Worth_Piano_Tuners">Ft. Worth Piano Tuners</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Jersey_OSHA_Violations">Jersey OSHA Violations</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Long_Beach_Flightless_Birds">Long Beach Flightless Birds</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Milwaukee_Flamingos">Milwaukee Flamingos</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Orlando_Business_Majors">Orlando Business Majors</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Phoenix_Freshrolls">Phoenix Freshrolls</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Sacramento_Boot_Lickers">Sacramento Boot Lickers</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Salt_Lake_Turbulence">Salt Lake Turbulence</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/San_Diego_Balloon_Animals">San Diego Balloon Animals</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/San_Francisco_Boat_Shoes">San Francisco Boat Shoes</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Seattle_Sneakers">Seattle Sneakers</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Sugar_Grove_Eavesdroppers">Sugar Grove Eavesdroppers</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Tucson_Butchers">Tucson Butchers</a>
+          </div>
+        </li>
+
+        <!-- maps -->
+        <li class="nav-item">
+          <a class="nav-link" href="https://rainbow.integration.golly456.life/maps.html">Maps</a>
+        </li>
+
+        <!-- simulator -->
+        <li class="nav-item">
+            <a class="nav-link" href="https://rainbow.integration.golly456.life/simulator/index.html">Simulator</a>
+        </li>
+
+        <!-- cups -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">
+              Cups <span class="caret"></span>
+          </a>
+          <div id="navbar-cups-dropdown-menu" class="dropdown-menu" aria-labelledby="themes">
+            <a class="dropdown-item" href="https://hellmouth.golly.life">Hellmouth Cup</a>
+            <a class="dropdown-item" href="https://pseudo.golly.life">Pseudo Cup</a>
+            <a class="dropdown-item" href="https://toroidal.golly.life">Toroidal Cup</a>
+            <a class="dropdown-item" href="https://dragon.golly.life">Dragon Cup</a>
+            <a class="dropdown-item" href="https://rainbow.golly.life">Rainbow Cup</a>
+          </div>
+        </li>
+
+        <!-- about -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">
+              About<span class="caret"></span>
+          </a>
+          <div id="navbar-about-dropdown-menu" class="dropdown-menu" aria-labelledby="themes">
+            <a class="dropdown-item" href="https://wiki.golly.life">Golly.Life Wiki</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Rainbow_Cup">About the Rainbow Cup</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Rainbow_Cup/Rules">Rainbow Cup Rules</a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="container-golly-header">
+  <div class="row">
+    <h1 class="golly-simulator-header" style="color: #eee;"><span id="golly-game-title">Rainbow Life</span></h1>
+  </div>
+</div>
+
+
+<div class="container invisible" id="container-golly-controls">
+
+  <div class="row">
+  
+      <div class="col-md-4">
+  
+          <div class="card bg-primary mb-3">
+              <h4 class="card-header text-white">Scoreboard</h4>
+  
+              <ul class="list-group scoreboard-panel list-group-flush">
+  
+                  <li class="list-group-item scoreboard-panel" id="scoreboard-panel-livecells1">
+                      <table width="100%"><tr><td class="scoreboard-table-left-column">
+                        <span class="badge badge-success" id="team1rank"></span>
+                        <span class="icon-container team-icon-container" id="team1-icon-container"></span>
+                        <span class="team1color team1name"></span>
+                      </td><td align="right" class="scoreboard-table-right-column">
+                        <b>
+                        <span class="team1color" id="livecells1"></span>
+                        </b>
+                      </td></tr></table>
+                  </li>
+  
+                  <li class="list-group-item scoreboard-panel" id="scoreboard-panel-livecells2">
+                      <table width="100%"><tr><td class="scoreboard-table-left-column">
+                        <span class="badge badge-success" id="team2rank"></span>
+                        <span class="icon-container team-icon-container" id="team2-icon-container"></span>
+                        <span class="team2color team2name"></span>
+                      </td><td align="right" class="scoreboard-table-right-column">
+                        <b>
+                        <span class="team2color" id="livecells2"></span>
+                        </b>
+                      </td></tr></table>
+                  </li>
+
+                  <li class="list-group-item scoreboard-panel" id="scoreboard-panel-livecells3">
+                      <table width="100%"><tr><td class="scoreboard-table-left-column">
+                        <span class="badge badge-success" id="team3rank"></span>
+                        <span class="icon-container team-icon-container" id="team3-icon-container"></span>
+                        <span class="team3color team3name"></span>
+                      </td><td align="right" class="scoreboard-table-right-column">
+                        <b>
+                        <span class="team3color" id="livecells3"></span>
+                        </b>
+                      </td></tr></table>
+                  </li>
+  
+                  <li class="list-group-item scoreboard-panel" id="scoreboard-panel-livecells4">
+                      <table width="100%"><tr><td class="scoreboard-table-left-column">
+                        <span class="badge badge-success" id="team4rank"></span>
+                        <span class="icon-container team-icon-container" id="team4-icon-container"></span>
+                        <span class="team4color team4name"></span>
+                      </td><td align="right" class="scoreboard-table-right-column">
+                        <b>
+                        <span class="team4color" id="livecells4"></span>
+                        </b>
+                      </td></tr></table>
+                  </li>
+  
+                  <li class="list-group-item scoreboard-panel" id="scoreboard-panel-generation">
+                      <table width="100%"><tr><td>
+                        Generation:
+                      </td><td align="right">
+                        <span id="generation"></span>
+                      </td></tr></table>
+                  </li>
+  
+                  <li class="list-group-item scoreboard-panel" id="scoreboard-panel-map">
+                      <table width="100%"><tr><td>
+                        Map:
+                      </td><td align="right">
+                        <span class="badge badge-brightmono" id="mapname-label"></span>
+                      </td></tr></table>
+                  </li>
+  
+              </ul>
+  
+          </div>
+  
+      </div>
+  
+      <div class="col-md-4">
+  
+          <div class="card bg-primary mb-3">
+              <h4 class="card-header text-white">Stats</h4>
+  
+              <ul class="list-group list-group-flush">
+
+                  <li class="list-group-item">
+                      <table width="100%"><tr><td>
+                        Live Percentage:
+                      </td><td align="right">
+                        <span id="livePct"></span>
+                      </td></tr></table>
+                  </li>
+  
+                  <li class="list-group-item">
+                      <table width="100%"><tr><td>
+                        Live Cells:
+                      </td><td align="right">
+                        <span id="livecells"></span>
+                      </td></tr></table>
+                  </li>
+
+                  <li class="list-group-item" id="team1record-container">
+                      <table width="100%"><tr><td>
+                        <span class="team1color"><span class="team1name"></span> W-2-3-L:</span>
+                      </td><td align="right" class="simulator-wl-column">
+                        <b>
+                        <span class="team1color simulator-record" id="team1record"></span>
+                        </b>
+                      </td></tr></table>
+                  </li>
+
+                  <li class="list-group-item" id="team2record-container">
+                      <table width="100%"><tr><td>
+                        <span class="team2color"><span class="team2name"></span> W-2-3-L:</span>
+                      </td><td align="right" class="simulator-wl-column">
+                        <b>
+                        <span class="team2color simulator-record" id="team2record"></span>
+                        </b>
+                      </td></tr></table>
+                  </li>
+  
+                  <li class="list-group-item" id="team3record-container">
+                      <table width="100%"><tr><td>
+                        <span class="team3color"><span class="team3name"></span> W-2-3-L:</span>
+                      </td><td align="right" class="simulator-wl-column">
+                        <b>
+                        <span class="team3color simulator-record" id="team3record"></span>
+                        </b>
+                      </td></tr></table>
+                  </li>
+  
+                  <li class="list-group-item" id="team4record-container">
+                      <table width="100%"><tr><td>
+                        <span class="team4color"><span class="team4name"></span> W-2-3-L:</span>
+                      </td><td align="right" class="simulator-wl-column">
+                        <b>
+                        <span class="team4color simulator-record" id="team4record"></span>
+                        </b>
+                      </td></tr></table>
+                  </li>
+  
+              </ul>
+  
+          </div>
+  
+      </div>
+      <div class="col-md-4">
+  
+          <div class="card bg-primary">
+              <h4 class="card-header text-white">Rainbow Control</h4>
+  
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                      <div class="box controls">
+                          <form action="">
+                              <div class="btn-group" role="group" aria-label="Basic example">
+                                  <button type="button" id="buttonRun"   class="btn btn-lg btn-success btn-secondary">Run</button>
+                                  <button type="button" id="buttonStep"  class="btn btn-lg btn-default btn-secondary">Step</button>
+                                  <button type="button" id="buttonClear" class="btn btn-lg btn-default btn-secondary">Clear</button>
+                              </div>
+                          </form>
+                      </div>
+                  </li>
+                  <li class="list-group-item">
+                      <div class="box controls">
+                          <form action="">
+                              <div class="btn-group" role="group" aria-label="Basic example">
+                                  <button type="button" id="buttonGrid"   class="btn btn-lg btn-default btn-secondary">Grid</button>
+                                  <button type="button" id="buttonTrail"  class="btn btn-lg btn-default btn-secondary">Trail</button>
+                                  <button type="button" id="buttonColors" class="btn btn-lg btn-default btn-secondary">Colors</button>
+                              </div>
+                          </form>
+                      </div>
+                  </li>
+                  <li class="list-group-item">
+                      <div class="box controls">
+                          <div class="slidecontainer">
+                            <form>
+                              <div class="form-group">
+                                <label for="formControlRange" class="float-left">Faster</label>
+                                <label for="formControlRange" class="float-right">Slower</label>
+                                <input type="range" class="form-control-range" id="speed-slider" min="1" max="4" step="1" value="2">
+                              </div>
+                            </form>
+                          </div>
+                      </div>
+                  </li>
+              </ul>
+  
+          </div>
+  
+      </div>
+  </div>
+
+  <div class="row">
+    <p>Press the <b>R</b> key to start/pause the simulator.
+    Press the <b>S</b> key to step forward one generation.
+    Press the <b>G</b> key to turn the grid on or off.
+    </p>
+  </div>
+
+</div>
+
+<div class="container invisible" id="container-canvas">
+
+  <div class="row">
+    <table border="0">
+      <tr>
+        <td>
+          <span class="badge badge-brightmono" id="zone2label"></span>
+        </td><td align="right">
+          <span class="badge badge-brightmono" id="zone1label"></span>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <canvas id="canvas" width="900" height="450">
+          </canvas>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="badge badge-brightmono" id="zone3label"></span>
+        </td><td align="right">
+          <span class="badge badge-brightmono" id="zone4label"></span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+</div>
+
+
+<div class="container" id="container-golly-frontmatter">
+
+  <div class="row">
+
+    <p>&nbsp;</p>
+
+    <p>&nbsp;</p>
+
+    <p>To start the simulator, click the <span class="badge badge-success">Run</span> button. Click again to pause it.
+    The <span class="badge badge-secondary">Step</span> button will advance the simulator by a single step
+    when it is paused. Refresh the window to reset the simulator.
+    </p>
+
+    <p>You can also control the appearance of the simulator.
+    Use the <span class="badge badge-secondary">Colors</span> button to cycle through different
+    color schemes for the two teams. Use the <span class="badge badge-secondary">Grid</span> button
+    to turn the grid on and off. Use the <span class="badge badge-secondary">Trails</span> button
+    to show what cells have been active at any point during the game.
+    </p>
+
+    <p>This simulator is a four-color version of Conway's Game of Life on a torus (periodic boundary conditions,
+    where the left side maps to the right side, and the top maps to the bottom). If you're not
+    sure what all of this is about, check out the <a href="https://rainbow.integration.golly456.life/about.html">about page</a>.
+    </p>
+
+  </div>
+
+</div>
+
+
+<div class="container invisible" id="container-loading">
+
+    <div class="row text-center notify-header">
+      <div class="col-md-12">
+        <h4 class="text-success">The site is currently loading...</h4>
+      </div>
+    </div>
+
+</div>
+
+
+<div class="container invisible" id="container-error">
+
+    <div class="row text-center notify-header">
+      <div class="col-md-12">
+        <h2 class="text-danger">The site has experienced a technical glitch.</h2>
+      </div>
+    </div>
+
+    <div class="row text-center notify-body">
+      <div class="col-md-12">
+        <p>
+        Ninjas have been dispatched to track down those responsible for the downtime
+        and bring them back to Hellmouth Community College to fix the site.
+        </p>
+      </div>
+    </div>
+
+</div>
+
+<noscript>
+  <div class="container" id="container-noscript">
+    <div class="row text-center landing-header">
+      <div class="col-md-12">
+        <h2 class="text-danger">You must have Javascript enabled to view this site.</h2>
+      </div>
+    </div>
+  </div>
+</noscript>
+
+
+<script type="text/javascript" src="https://rainbow.integration.golly456.life/theme/js/geturl.js"></script>
+<script type="text/javascript" src="https://rainbow.integration.golly456.life/theme/js/tables.js"></script>
+<script type="text/javascript" src="https://rainbow.integration.golly456.life/theme/js/navbar.js"></script>
+<script type="text/javascript" src="https://rainbow.integration.golly456.life/theme/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://rainbow.integration.golly456.life/theme/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://rainbow.integration.golly456.life/theme/js/jquery-svg.js"></script>
+<script src="https://rainbow.integration.golly456.life/theme/js/json-sans-eval.js"></script>
+<script src="rainbow_life.js"></script>
+
+<footer id="contentinfo" class="body">
+    <div class="text-center">
+    <p>Golly is a product of the Metablaseball Research Laboratory at Hellmouth Community College</p>
+
+    <p>Golly.Life on Twitter: <a href="https://twitter.com/gollysplorts">Golly Splorts</a></p>
+
+    <p>Golly.Life Chief Architect: <a href="https://twitter.com/ch4zm_of_hell">Ch4zm of Hellmouth</a></p>
+
+    <p>Golly Commissioner: Rubrix Helicopter</p>
+
+    <p>
+        Licensed under the <a rel="license" href="https://mit-license.org/">MIT License</a> - <a href="https://github.com/golly-splorts/golly-pelican/blob/main/ATTRIBUTION">Attribution</a>
+    </p>
+    </div>
+
+<!-- Default Statcounter code for Golly https://golly.life -->
+<script type="text/javascript">
+var sc_project=12429156;
+var sc_invisible=1;
+var sc_security="5f5d6061";
+var sc_https=1;
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics Made Easy -
+StatCounter" href="https://statcounter.com/" target="_blank"><img
+class="statcounter" src="https://c.statcounter.com/12429156/0/5f5d6061/1/"
+alt="Web Analytics Made Easy - StatCounter"></a></div></noscript>
+<!-- End of Statcounter Code --></footer>
+</body>
+</html>

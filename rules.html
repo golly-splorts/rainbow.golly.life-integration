@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<meta charset="utf-8">
+<html lang="en">
+<head>
+
+    <title>GollyX456</title>
+    <meta charset="utf-8" />
+
+    <script>
+var baseUIUrl  = 'https://rainbow.integration.golly456.life';
+var baseApiUrl = 'https://cloud.rainbow.golly456.life';
+var mapsApiUrl = 'https://maps.golly456.life';
+    </script>
+
+    <!--
+    CSS styles
+    -->
+    <link href="https://rainbow.integration.golly456.life/theme/css/slate.css"  rel="stylesheet" type="text/css">
+    <link href="https://rainbow.integration.golly456.life/theme/css/custom.css" rel="stylesheet" type="text/css">
+    <link href="https://rainbow.integration.golly456.life/theme/css/fa.css"     rel="stylesheet" type="text/css"/>
+
+    <link rel="icon" type="image/png" href="https://rainbow.integration.golly456.life/theme/img/golly-favicon.png">
+
+    <!--
+        Versions:
+        gollyx-toroidal-pelican: 
+        gollyx-toroidal-pelican-theme: 24.0.0
+    -->
+
+
+</head>
+<body id="index">
+
+<!-- Navigation -->
+<div id="navbar-div-top-level" class="navbar navbar-expand-md fixed-top navbar-dark bg-primary">
+
+  <div id="navbar-div-container" class="container">
+
+    <a href="https://rainbow.integration.golly456.life/" class="navbar-brand">
+      <img class="navbar-brand-logo" type="image/png" width="25px" src="https://rainbow.integration.golly456.life/theme/img/rainbow-cup.png" alt="logo" />
+      GollyX456
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- this is the non-brand portion of the nav bar -->
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+
+      <!-- begin list of navbar buttons -->
+      <ul class="navbar-nav">
+
+        <!--
+        pages order:
+        - home
+        - season*
+        - postseason*
+        - league
+        - maps
+        -->
+
+        <!-- seasons -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">
+              Season <span class="caret"></span>
+          </a>
+          <div id="navbar-season-dropdown-menu" class="dropdown-menu" aria-labelledby="themes">
+            <!--
+            <a class="dropdown-item" href="https://rainbow.integration.golly456.life/season.html">Season 1</a>
+            -->
+          </div>
+        </li>
+
+        <!-- postseasons -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">
+              Postseason <span class="caret"></span>
+          </a>
+          <div id="navbar-postseason-dropdown-menu" class="dropdown-menu" aria-labelledby="themes">
+            <!--
+            <a class="dropdown-item" href="https://rainbow.integration.golly456.life/postseason.html">Season 1</a>
+            -->
+          </div>
+        </li>
+
+        <!-- league -->
+        <li class="nav-item">
+          <a class="nav-link" href="https://rainbow.integration.golly456.life/league.html">Standings</a>
+        </li>
+
+        <!-- explore -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">
+              Teams<span class="caret"></span>
+          </a>
+          <div id="navbar-explore-dropdown-menu" class="dropdown-menu" aria-labelledby="themes">
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Alewife_Arsonists">Alewife Arsonists</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Albuquerque_Solarpunks">Albuquerque Solarpunks</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Boylston_Boogers">Boylston Boogers</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Baltimore_Texas">Baltimore Texas</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Delaware_Corporate_Shells">Delaware Corporate Shells</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Detroit_Grape_Chews">Detroit Grape Chews</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Elko_Astronauts">Elko Astronauts</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Ft._Worth_Piano_Tuners">Ft. Worth Piano Tuners</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Jersey_OSHA_Violations">Jersey OSHA Violations</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Long_Beach_Flightless_Birds">Long Beach Flightless Birds</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Milwaukee_Flamingos">Milwaukee Flamingos</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Orlando_Business_Majors">Orlando Business Majors</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Phoenix_Freshrolls">Phoenix Freshrolls</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Sacramento_Boot_Lickers">Sacramento Boot Lickers</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Salt_Lake_Turbulence">Salt Lake Turbulence</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/San_Diego_Balloon_Animals">San Diego Balloon Animals</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/San_Francisco_Boat_Shoes">San Francisco Boat Shoes</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Seattle_Sneakers">Seattle Sneakers</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Sugar_Grove_Eavesdroppers">Sugar Grove Eavesdroppers</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Tucson_Butchers">Tucson Butchers</a>
+          </div>
+        </li>
+
+        <!-- maps -->
+        <li class="nav-item">
+          <a class="nav-link" href="https://rainbow.integration.golly456.life/maps.html">Maps</a>
+        </li>
+
+        <!-- simulator -->
+        <li class="nav-item">
+            <a class="nav-link" href="https://rainbow.integration.golly456.life/simulator/index.html">Simulator</a>
+        </li>
+
+        <!-- cups -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">
+              Cups <span class="caret"></span>
+          </a>
+          <div id="navbar-cups-dropdown-menu" class="dropdown-menu" aria-labelledby="themes">
+            <a class="dropdown-item" href="https://hellmouth.golly.life">Hellmouth Cup</a>
+            <a class="dropdown-item" href="https://pseudo.golly.life">Pseudo Cup</a>
+            <a class="dropdown-item" href="https://toroidal.golly.life">Toroidal Cup</a>
+            <a class="dropdown-item" href="https://dragon.golly.life">Dragon Cup</a>
+            <a class="dropdown-item" href="https://rainbow.golly.life">Rainbow Cup</a>
+          </div>
+        </li>
+
+        <!-- about -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">
+              About<span class="caret"></span>
+          </a>
+          <div id="navbar-about-dropdown-menu" class="dropdown-menu" aria-labelledby="themes">
+            <a class="dropdown-item" href="https://wiki.golly.life">Golly.Life Wiki</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Rainbow_Cup">About the Rainbow Cup</a>
+            <a class="dropdown-item" href="https://wiki.golly.life/wiki/Rainbow_Cup/Rules">Rainbow Cup Rules</a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="article-div-container" class="container">
+  <div id="article-div-row" class="row">
+    <div id="article-div-col12" class="col-md-12">
+      <h1>The Rules</h1>
+<h2>Section 1. Objective</h2>
+<ol>
+<li>Golly is a game played between two or more teams, each of a different color, on a rectangular grid with even
+   dimensions.</li>
+<li>Play shall proceed according to the rules of Conway's Game of Life, modified for multiple colors.</li>
+<li>A day shall consist of a set of games between two or more teams.</li>
+<li>A season shall consist of an odd number of days, following which a pool of winners shall be selected for a
+   post-season playoffs bracket. The winner of this bracket shall be declared the Golly Champion until the next
+   season begins.</li>
+<li>All golly games during a given season shall use a common grid size.</li>
+<li>The objective of both teams is to maintain the most number of alive cells on the M x N grid by the time the game
+   is declared over.</li>
+<li>Once play begins, it shall continue until the team with the most living cells on the board has maintained a
+   constant victory percentage (number of live cells of that team's color divided by number of live cells total)
+   at a constant value of greater than 50% for a specified number of generations.</li>
+</ol>
+<h2>Section 2. The Field</h2>
+<h3>Subsection 2.1. The Grid</h3>
+<ol>
+<li>The field shall be laid out as a rectangular M x N grid, where M and N are even integers.</li>
+</ol>
+<h3>Subsection 2.2. Patterns</h3>
+<ol>
+<li>Each matchup of teams shall have a pattern assigned for that matchup.</li>
+<li>The initial configuration of each team on the grid is determined by the pattern for that matchup.</li>
+<li>Each game in a given day shall be played using a unique pattern.</li>
+<li>A single set of patterns shall be used throughout a given season.</li>
+<li>The pattern for a matchup shall determine which shapes shall be placed on the grid. The exact arrangement of the
+   shapes for each game shall be unique and random.</li>
+<li>Each map shall, in general, assign an equal number of live squares to each team.</li>
+<li>The above rule may not be enforced for some patterns.</li>
+</ol>
+<h3>Subsection 2.3. Matchups</h3>
+<ol>
+<li>Each regular-season matchup between two teams shall be played twice using the same pattern. Each team shall switch initial
+   positions between games.</li>
+<li>The last game of the season shall be the sole exception to the above rule. Matchups shall take place on random
+   patterns with team assignments determined randomly.</li>
+</ol>
+<h3>Subsection 2.4. Quadrants</h3>
+<ol>
+<li>The grid shall be divided into four quadrants, which shall have unique names based on the pattern used for that
+   game. The quadrants shall serve no purpose in the game whatsoever.</li>
+</ol>
+<h2>Section 3. Equipment and Roster</h2>
+<ol>
+<li>Each team shall maintain a roster of players, with one player assigned to a unique grid square.</li>
+<li>Each cell on the grid is alive or dead. If a cell is alive, it may only be occupied by a single player.</li>
+<li>Each player is permitted to live in a single cell for the duration of their lifetime.</li>
+<li>Players shall not complain about how small their cell is.</li>
+<li>Players shall not be permitted to sublet or lease their cell.</li>
+<li>Players shall not be permitted to make any additions to their cell, including but not limited to: fences that fail to
+   meet inspection standards, antennas or satellite dishes, canvases or tarps on the exterior of the cell, pets
+   above the 200 kg household pet weight limit, or any other modifications to the cell that would affect its
+   appearance in any way that may interfere with the golly spectator experience.</li>
+<li>Players shall be responsible for repairing damages and removing all furniture from their cell prior to dying.</li>
+</ol>
+<h2>Section 4. Game Play</h2>
+<ol>
+<li>The game shall commence through the fourth dimension using a set of uniform, explicit time steps.</li>
+<li>Each square on the grid shall be in a state of being either alive or dead.</li>
+<li>Each live cell shall have a color associated with a team playing in the game.</li>
+<li>For each square that is populated:<ol>
+<li>Each cell with one or no neighbors shall die by solitude.</li>
+<li>Each cell with four or neighbors shall die by overpopulation.</li>
+<li>Each cell with 2-3 neighbors shall survive to the next generation.</li>
+</ol>
+</li>
+<li>For each square that is unpopulated:<ol>
+<li>Each cell with 3 neighbors shall become populated.</li>
+</ol>
+</li>
+<li>For a game of life with 2 colors, each new cell that is birthed shall take on the color of the majority of its
+   parent cells.</li>
+<li>For a game of life with 3 or more colors, each new cell that is birthed shall take on the color of the majority
+   of its parent cells, if there are two parents with the same color, or else a random choice from among the
+   parent cell colors.</li>
+</ol>
+<h2>Section 5. Ending the Game</h2>
+<ol>
+<li>Let X denote the maximum grid dimension (the larger of M and N on an M x N grid).</li>
+<li>Game play shall proceed uninterrupted for 2X generations, during which a running average of the victory
+   percentage (the number of live cells of the team with the most cells, divided by the number of live cells total)
+   over a window of 2X shall be tabulated.</li>
+<li>When the running average of the victory percentage has remained constant (and not 50%) to within a specified
+   tolerance for three consecutive generations, the winning team shall be declared the victor.</li>
+<li>The tolerance used to determine whether the running average has changed from the prior generation shall be
+   determined by the maximum grid dimension.</li>
+</ol>
+<h2>Section 6. Season</h2>
+<ol>
+<li>Each season shall consist of S games, where S is a positive, odd integer. In general, S = 49.</li>
+<li><s>Each matchup of teams shall result in two games, with each team swapping positions on the map between games,
+   excepting the last matchup of the season, which shall consist of a single game.</s> (Amended in Season 3:
+   "Each matchup of teams shall result in two games played on two random maps, excepting the last matchup of the
+   season, which shall consist of a single game.")</li>
+<li>Each team shall play their season's games against teams in the same division (intra-divisional games) or
+   against teams in the same league (inter-divisional games).</li>
+<li>Schedules for each season shall be determined randomly. Mechanisms may be implemented to ensure a fair schedule
+   for all teams.</li>
+</ol>
+<h2>Section 7. Postseason</h2>
+<ol>
+<li>At the end of each season, a playoffs bracket shall be determined.</li>
+<li>Each league shall declare one winner from each division, with each division winner earning a spot in the
+   playoffs bracket. The remaining spots in the playoffs bracket shall go to the non-division winner teams with
+   the best win records in the league.</li>
+<li>In the case where two teams are tied in number of wins, the best record shall be assigned to the team with the
+   most cumulative live cells at the end of each game (the highest-scoring team). in the case of a tie in scores,
+   teams shall roll a 100-sided die. The team that rolls the highest number shall have the best record.</li>
+<li>Each postseason bracket shall consist of at least three rounds:<ol>
+<li>League Division Series Round: two division series per league, played amongst the top 4 teams in each league.<ol>
+<li>The number 1 and number 4 seeds shall play the first division series.</li>
+<li>The number 2 and number 3 seeds shall play the second division series.</li>
+<li>The series shall be best of 5.</li>
+</ol>
+</li>
+<li>League Championship Series Round: one championship series per league, played amongst the top 2 teams in each
+   league.<ol>
+<li>The series shall be best of 5.</li>
+</ol>
+</li>
+<li>Hellmouth Cup Series Round: one Hellmouth Cup series, played between the winners from each league.<ol>
+<li>The series shall be best of 7.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>The championship team shall be the team that wins 4 games in the Hellmouth Cup Series. They shall be declared the golly
+   champion and shall remain the golly champion until a new champion is named.</li>
+</ol>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://rainbow.integration.golly456.life/theme/js/geturl.js"></script>
+<script type="text/javascript" src="https://rainbow.integration.golly456.life/theme/js/tables.js"></script>
+<script type="text/javascript" src="https://rainbow.integration.golly456.life/theme/js/navbar.js"></script>
+<script type="text/javascript" src="https://rainbow.integration.golly456.life/theme/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://rainbow.integration.golly456.life/theme/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://rainbow.integration.golly456.life/theme/js/jquery-svg.js"></script>
+
+<footer id="contentinfo" class="body">
+    <div class="text-center">
+    <p>Golly is a product of the Metablaseball Research Laboratory at Hellmouth Community College</p>
+
+    <p>Golly.Life on Twitter: <a href="https://twitter.com/gollysplorts">Golly Splorts</a></p>
+
+    <p>Golly.Life Chief Architect: <a href="https://twitter.com/ch4zm_of_hell">Ch4zm of Hellmouth</a></p>
+
+    <p>Golly Commissioner: Rubrix Helicopter</p>
+
+    <p>
+        Licensed under the <a rel="license" href="https://mit-license.org/">MIT License</a> - <a href="https://github.com/golly-splorts/golly-pelican/blob/main/ATTRIBUTION">Attribution</a>
+    </p>
+    </div>
+
+<!-- Default Statcounter code for Golly https://golly.life -->
+<script type="text/javascript">
+var sc_project=12429156;
+var sc_invisible=1;
+var sc_security="5f5d6061";
+var sc_https=1;
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics Made Easy -
+StatCounter" href="https://statcounter.com/" target="_blank"><img
+class="statcounter" src="https://c.statcounter.com/12429156/0/5f5d6061/1/"
+alt="Web Analytics Made Easy - StatCounter"></a></div></noscript>
+<!-- End of Statcounter Code --></footer>
+</body>
+</html>

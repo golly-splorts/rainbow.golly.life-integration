@@ -1,0 +1,297 @@
+
+/* give map labels some room */
+#zone1label, #zone2label {
+    margin-bottom: 25px;
+}
+#zone3label, #zone4label {
+    margin-top: 25px;
+}
+
+/* navbar color */
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-brand:hover {
+    color: #FF9300 !important;
+}
+
+.navbar-brand {
+    font-size: 1.095rem;
+}
+
+/* navbar logo padding */
+.navbar-brand-logo {
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+h1, h2, h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+th {
+    text-align: center;
+}
+
+.league-icon-container {
+    margin-right: 15px;
+}
+
+.team-icon {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: -8px;
+}
+
+.scoreboard-panel {
+    font-size: 18px;
+}
+
+.scoreboard-table-right-column {
+    width: 44px;
+}
+
+body {
+    /* navbar: */
+    padding-top: 70px;
+    /* no navbar: */
+    /*padding-top: 20px;*/
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.badge-brightmono {
+    background-color: #eee;
+    color: #333;
+}
+
+#canvascontainer {
+    padding-bottom: 20px;
+}
+
+a.padded-anchor {
+    position:absolute; top:-100px;
+}
+
+footer {
+    margin-top: 120px;
+}
+
+
+
+/****************************
+ * season, posteason, league
+ ****************************/
+
+.season-league-container {
+  margin-top: 0px;
+}
+
+.league-standings-league-header-row {
+    margin-top:    20px;
+}
+.league-standings-division-header-row {
+    margin-top:    35px;
+    margin-bottom: 10px;
+}
+
+.postseason-toc-text {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.season-day-anchor {
+  position: absolute;
+  top: -100px;
+}
+
+.season-day-header {
+    margin-top: 30px;
+}
+
+.season-number-button {
+    width: 40px;
+}
+
+h1.season-header {
+    margin-bottom: 60px;
+}
+
+h1.league-header {
+    margin-bottom: 60px;
+}
+
+div.season-toc {
+    margin-bottom: 60px;
+}
+
+div#postseason-champion-container {
+    margin-top: 30px;
+}
+
+div.postseason-series-header, div.league-standings-section {
+    margin-top: 60px;
+}
+
+/****************************
+ * game card styles
+ ****************************/
+
+.game-winner {
+    font-weight: 600;
+}
+
+.game-loser {
+    font-weight: 250;
+}
+
+div.card-body {
+    font-weight: 250;
+}
+
+/****************************
+ * landing page
+ ****************************/
+
+.flipdown-clock {
+    padding-bottom: 60px;
+}
+
+/* .rotor-group-heading, .rotor-group-heading::before { */
+.flipdown.flipdown__theme-dark .rotor-group-heading::before {
+    color: #eee;
+}
+
+div.invisible {
+    visibility: hidden;
+    display: none;
+}
+
+div.seed-table-header {
+    margin-top: 60px;
+}
+
+div.league-container, div#ws-league-container {
+    margin-top: 30px;
+}
+
+div.landing-header {
+    margin-bottom: 30px;
+}
+
+/*
+div.landing-header-below {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+*/
+
+h1.champion-header, h2.champion-header, h3.champion-header {
+    margin-bottom: 30px;
+}
+
+/*
+div.seed-table {
+    margin-top: 30px;
+}
+*/
+
+.seed-number {
+    font-size: 110%;
+}
+
+div.vspace40 {
+    margin-top: 40px;
+}
+
+/*****************************
+ * player viewer
+ *****************************/
+
+#playerteamcontrols {
+    padding-bottom: 20px;
+}
+
+.player-viewer-link, .player-viewer-team-link {
+  color: steelblue;
+}
+
+/****************************
+ * standings page
+ ****************************/
+
+span.standings-w23lrecord, span.standings-rainbows {
+    font-size: 110%;
+}
+
+table.standings-table thead th {
+  padding: 0.8rem;
+  vertical-align: top;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
+table.standings-table td {
+  padding: 0.8rem;
+  vertical-align: top;
+  border-top: 1px solid rgba(0, 0, 0, 0.6);
+  border-bottom: 0px;
+}
+
+table.standings-table {
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+
+/****************************
+ * maps page
+ * **************************/
+
+/*
+.map-card {
+  max-width: 20rem;
+}
+*/
+
+.map-card-header {
+    font-size: 125%;
+}
+
+.map-card-header .badge-info {
+    background-color: #2b74d4;
+}
+
+.map-card-header .badge-warning {
+    background-color: #d42b50;
+}
+
+.map-card-simulate {
+  margin-bottom: 20px;
+}
+
+/************************************
+ * simulator page
+ ************************************/
+
+.golly-simulator-header {
+  color: #eee;
+  margin-bottom: 30px;
+}
+
+span.simulator-record {
+  font-size: 110%;
+}
+
+.territory-score-column {
+  width: 100px;
+}
+
+.simulator-wl-column {
+  width: 100px;
+}
