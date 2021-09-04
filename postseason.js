@@ -503,20 +503,20 @@
 
           var t;
           for (t = 0; t < t1_tags.length; t++) {
-            teamWinLossElem = t1_tags[t];
-            teamWinLossElem.innerHTML = t1_wlstr;
+            teamW23LElem = t1_tags[t];
+            teamW23LElem.innerHTML = t1_wlstr;
           }
           for (t = 0; t < t2_tags.length; t++) {
-            teamWinLossElem = t2_tags[t];
-            teamWinLossElem.innerHTML = t2_wlstr;
+            teamW23LElem = t2_tags[t];
+            teamW23LElem.innerHTML = t2_wlstr;
           }
           for (t = 0; t < t3_tags.length; t++) {
-            teamWinLossElem = t3_tags[t];
-            teamWinLossElem.innerHTML = t3_wlstr;
+            teamW23LElem = t3_tags[t];
+            teamW23LElem.innerHTML = t3_wlstr;
           }
           for (t = 0; t < t4_tags.length; t++) {
-            teamWinLossElem = t4_tags[t];
-            teamWinLossElem.innerHTML = t4_wlstr;
+            teamW23LElem = t4_tags[t];
+            teamW23LElem.innerHTML = t4_wlstr;
           }
         }
 
