@@ -351,9 +351,6 @@
               var seedTeamRecord = seedTeamObject['teamWinLoss'];
               var seedTeamRecordStr = "(" + seedTeamRecord[0] + "-" + seedTeamRecord[1] + ")";
 
-              console.log('debugging');
-              console.log(seedTeamRecordStr);
-
               var nameElemId = 'league-'+iLp1+'-seed-'+iSp1;
               var nameElem = document.getElementById(nameElemId);
 
@@ -572,6 +569,10 @@
             }
 
             // Assemble team W-L records
+            console.log(game.hasOwnProperty('team1WinLoss'));
+            console.log(game.hasOwnProperty('team2WinLoss'));
+            console.log(game.hasOwnProperty('team3WinLoss'));
+            console.log(game.hasOwnProperty('team4WinLoss'));
             if (
               game.hasOwnProperty('team1WinLoss') && 
               game.hasOwnProperty('team2WinLoss') &&
