@@ -555,10 +555,45 @@
           this.ranks = [this.gameApiResult.team1Rank, this.gameApiResult.team2Rank, this.gameApiResult.team3Rank, this.gameApiResult.team4Rank];
         }
 
-        GOL.element.team1rank.innerHTML = this.ranks[0]+1;
-        GOL.element.team2rank.innerHTML = this.ranks[1]+1;
-        GOL.element.team3rank.innerHTML = this.ranks[2]+1;
-        GOL.element.team4rank.innerHTML = this.ranks[3]+1;
+        if(this.ranks[0] == 0) {
+            GOL.element.team1rank.innerHTML = "+11🌈";
+        } else if(this.ranks[0] == 1) {
+            GOL.element.team1rank.innerHTML = "+7🌈";
+        } else if(this.ranks[0] == 2) {
+            GOL.element.team1rank.innerHTML = "+3🌈";
+        } else if(this.ranks[0] == 3) {
+            GOL.element.team1rank.innerHTML = "L";
+        }
+
+        if(this.ranks[1] == 0) {
+            GOL.element.team2rank.innerHTML = "+11🌈";
+        } else if(this.ranks[1] == 1) {
+            GOL.element.team2rank.innerHTML = "+7🌈";
+        } else if(this.ranks[1] == 2) {
+            GOL.element.team2rank.innerHTML = "+3🌈";
+        } else if(this.ranks[1] == 3) {
+            GOL.element.team2rank.innerHTML = "L";
+        }
+
+        if(this.ranks[2] == 0) {
+            GOL.element.team3rank.innerHTML = "+11🌈";
+        } else if(this.ranks[2] == 1) {
+            GOL.element.team3rank.innerHTML = "+7🌈";
+        } else if(this.ranks[2] == 2) {
+            GOL.element.team3rank.innerHTML = "+3🌈";
+        } else if(this.ranks[2] == 3) {
+            GOL.element.team3rank.innerHTML = "L";
+        }
+
+        if(this.ranks[3] == 0) {
+            GOL.element.team4rank.innerHTML = "+11🌈";
+        } else if(this.ranks[3] == 1) {
+            GOL.element.team4rank.innerHTML = "+7🌈";
+        } else if(this.ranks[3] == 2) {
+            GOL.element.team4rank.innerHTML = "+3🌈";
+        } else if(this.ranks[3] == 3) {
+            GOL.element.team4rank.innerHTML = "L";
+        }
 
         // Losers should be in red.
         var last = 3;

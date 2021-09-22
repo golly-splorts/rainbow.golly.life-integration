@@ -15,10 +15,8 @@
       'container-loading',
       'container-mode0009',
       'container-mode1019',
-      'container-mode21',
       'container-mode22',
       'container-mode23',
-      'container-mode31',
       'container-mode32',
       'container-mode33',
       'container-mode40plus'
@@ -190,9 +188,7 @@
 
       // Handle special cases
       var container;
-      if (mode==21) {
-        container = this.filterContainers('container-mode21');
-      } else if (mode==22) {
+      if (mode==22) {
         container = this.filterContainers('container-mode22');
       } else if (mode==23) {
         container = this.filterContainers('container-mode23');
@@ -212,9 +208,7 @@
 
       // Handle special cases
       var container;
-      if (mode==31) {
-        container = this.filterContainers('container-mode31');
-      } else if (mode==32) {
+      if (mode==32) {
         container = this.filterContainers('container-mode32');
       } else if (mode==33) {
         container = this.filterContainers('container-mode33');
@@ -1069,7 +1063,7 @@
               throw "Could not find page element for game id " + game.gameid;
             } // end if found game id elem
           } // end loops updating divs for each game
-        } // end if mode 21/22/23
+        } // end if mode 22/23
       })
       .catch(err => {
         console.log(err);
