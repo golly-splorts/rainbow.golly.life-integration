@@ -115,10 +115,10 @@
           this.updatePostseasonHeader(this.season);
           if (mode < 0) {
             throw "Invalid mode " + mode;
-          } else if ((mode < 20) || (mode==21)) {
+          } else if ((mode < 20) || (mode==22)) {
             // Waiting for postseason to start
             this.postseasonWaitingMessage()
-          } else if (mode==31 && modeApiResult.elapsed<3600) {
+          } else if (mode==32 && modeApiResult.elapsed<3600) {
             // Waiting for first day to finish
             this.postseasonWaitingMessage()
           } else {
