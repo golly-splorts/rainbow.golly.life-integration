@@ -286,10 +286,6 @@
 
       // Add ?trail=1 to the end of the URL to show trails
       this.trail.current = this.helpers.getUrlParameter('trail') === '1' ? true : this.trail.current;
-
-      // // Get the current wait time (this is updated when the user changes it)
-      // var x = document.getElementById("speed-slider").value;
-      // this.waitTimeMs = Math.min(10**x, 1000);
     },
 
     /**
@@ -1148,34 +1144,73 @@
         var game = this.gameApiResult;
         if (game.isPostseason) {
           // Postseason: win-loss record in current series
-          var t1_swlstr = game.team1SeriesW23L[0] + "-" + game.team1SeriesW23L[1] + "-" + game.team1SeriesW23L[2] + "-" + game.team1SeriesW23L[3] + "<br />" + (11*game.team1SeriesW23L[0] + 7*game.team1SeriesW23L[1] + 3*game.team1SeriesW23L[2]) + " 🌈";
-          var t2_swlstr = game.team2SeriesW23L[0] + "-" + game.team2SeriesW23L[1] + "-" + game.team2SeriesW23L[2] + "-" + game.team2SeriesW23L[3] + "<br />" + (11*game.team2SeriesW23L[0] + 7*game.team2SeriesW23L[1] + 3*game.team2SeriesW23L[2]) + " 🌈";
-          var t3_swlstr = game.team3SeriesW23L[0] + "-" + game.team3SeriesW23L[1] + "-" + game.team3SeriesW23L[2] + "-" + game.team3SeriesW23L[3] + "<br />" + (11*game.team3SeriesW23L[0] + 7*game.team3SeriesW23L[1] + 3*game.team3SeriesW23L[2]) + " 🌈";
-          var t4_swlstr = game.team4SeriesW23L[0] + "-" + game.team4SeriesW23L[1] + "-" + game.team4SeriesW23L[2] + "-" + game.team4SeriesW23L[3] + "<br />" + (11*game.team4SeriesW23L[0] + 7*game.team4SeriesW23L[1] + 3*game.team4SeriesW23L[2]) + " 🌈";
+          var t1_wlstr = game.team1SeriesW23L[0] + "-" + game.team1SeriesW23L[1] + "-" + game.team1SeriesW23L[2] + "-" + game.team1SeriesW23L[3];
+          var t2_wlstr = game.team2SeriesW23L[0] + "-" + game.team2SeriesW23L[1] + "-" + game.team2SeriesW23L[2] + "-" + game.team2SeriesW23L[3];
+          var t3_wlstr = game.team3SeriesW23L[0] + "-" + game.team3SeriesW23L[1] + "-" + game.team3SeriesW23L[2] + "-" + game.team3SeriesW23L[3];
+          var t4_wlstr = game.team4SeriesW23L[0] + "-" + game.team4SeriesW23L[1] + "-" + game.team4SeriesW23L[2] + "-" + game.team4SeriesW23L[3];
 
-          this.element.team1wlrec.innerHTML = t1_swlstr;
-          this.element.team2wlrec.innerHTML = t2_swlstr;
-          this.element.team3wlrec.innerHTML = t3_swlstr;
-          this.element.team4wlrec.innerHTML = t4_swlstr;
+          this.element.team1wlrec.innerHTML = t1_wlstr;
+          this.element.team2wlrec.innerHTML = t2_wlstr;
+          this.element.team3wlrec.innerHTML = t3_wlstr;
+          this.element.team4wlrec.innerHTML = t4_wlstr;
+
+          var t1_rainstr = (11*game.team1SeriesW23L[0] + 7*game.team1SeriesW23L[1] + 3*game.team1SeriesW23L[2]) + " 🌈";
+          var t2_rainstr = (11*game.team2SeriesW23L[0] + 7*game.team2SeriesW23L[1] + 3*game.team2SeriesW23L[2]) + " 🌈";
+          var t3_rainstr = (11*game.team3SeriesW23L[0] + 7*game.team3SeriesW23L[1] + 3*game.team3SeriesW23L[2]) + " 🌈";
+          var t4_rainstr = (11*game.team4SeriesW23L[0] + 7*game.team4SeriesW23L[1] + 3*game.team4SeriesW23L[2]) + " 🌈";
+
+          this.element.team1rain.innerHTML = t1_rainstr;
+          this.element.team2rain.innerHTML = t2_rainstr;
+          this.element.team3rain.innerHTML = t3_rainstr;
+          this.element.team4rain.innerHTML = t4_rainstr;
 
         } else {
           // Season: win-loss record to date
-          var t1_swlstr = game.team1W23L[0] + "-" + game.team1W23L[1] + "-" + game.team1W23L[2] + "-" + game.team1W23L[3] + "<br />" + (11*game.team1W23L[0] + 7*game.team1W23L[1] + 3*game.team1W23L[2]) + " 🌈";
-          var t2_swlstr = game.team2W23L[0] + "-" + game.team2W23L[1] + "-" + game.team2W23L[2] + "-" + game.team2W23L[3] + "<br />" + (11*game.team2W23L[0] + 7*game.team2W23L[1] + 3*game.team2W23L[2]) + " 🌈";
-          var t3_swlstr = game.team3W23L[0] + "-" + game.team3W23L[1] + "-" + game.team3W23L[2] + "-" + game.team3W23L[3] + "<br />" + (11*game.team3W23L[0] + 7*game.team3W23L[1] + 3*game.team3W23L[2]) + " 🌈";
-          var t4_swlstr = game.team4W23L[0] + "-" + game.team4W23L[1] + "-" + game.team4W23L[2] + "-" + game.team4W23L[3] + "<br />" + (11*game.team4W23L[0] + 7*game.team4W23L[1] + 3*game.team4W23L[2]) + " 🌈";
+          var t1_wlstr = game.team1W23L[0] + "-" + game.team1W23L[1] + "-" + game.team1W23L[2] + "-" + game.team1W23L[3];
+          var t2_wlstr = game.team2W23L[0] + "-" + game.team2W23L[1] + "-" + game.team2W23L[2] + "-" + game.team2W23L[3];
+          var t3_wlstr = game.team3W23L[0] + "-" + game.team3W23L[1] + "-" + game.team3W23L[2] + "-" + game.team3W23L[3];
+          var t4_wlstr = game.team4W23L[0] + "-" + game.team4W23L[1] + "-" + game.team4W23L[2] + "-" + game.team4W23L[3];
 
-          this.element.team1wlrec.innerHTML = t1_swlstr;
-          this.element.team2wlrec.innerHTML = t2_swlstr;
-          this.element.team3wlrec.innerHTML = t3_swlstr;
-          this.element.team4wlrec.innerHTML = t4_swlstr;
+          this.element.team1wlrec.innerHTML = t1_wlstr;
+          this.element.team2wlrec.innerHTML = t2_wlstr;
+          this.element.team3wlrec.innerHTML = t3_wlstr;
+          this.element.team4wlrec.innerHTML = t4_wlstr;
+
+          var t1_rainstr = (11*game.team1W23L[0] + 7*game.team1W23L[1] + 3*game.team1W23L[2]) + " 🌈"; 
+          var t2_rainstr = (11*game.team2W23L[0] + 7*game.team2W23L[1] + 3*game.team2W23L[2]) + " 🌈"; 
+          var t3_rainstr = (11*game.team3W23L[0] + 7*game.team3W23L[1] + 3*game.team3W23L[2]) + " 🌈"; 
+          var t4_rainstr = (11*game.team4W23L[0] + 7*game.team4W23L[1] + 3*game.team4W23L[2]) + " 🌈"; 
+
+          this.element.team1rain.innerHTML = t1_rainstr;
+          this.element.team2rain.innerHTML = t2_rainstr;
+          this.element.team3rain.innerHTML = t3_rainstr;
+          this.element.team4rain.innerHTML = t4_rainstr;
 
         }
       } else {
-        this.element.team1wlrecCont.remove();
-        this.element.team2wlrecCont.remove();
-        this.element.team3wlrecCont.remove();
-        this.element.team4wlrecCont.remove();
+
+        // TODO When not in game mode, do the following:
+        // - remove table columns for records and rainbows
+        // - shrink icons column to 0px
+        // - shrink scoreboard container to sm-4
+        var elems;
+        var i, j, k;
+
+        // Delete unused columns from scoreboard table
+        var idsToDelete = ['scoreboard-table-column-icon', 'scoreboard-table-column-spacing', 'scoreboard-table-column-record', 'scoreboard-table-column-rainbows'];
+        for(i = 0; i < idsToDelete.length; i++) {
+          idToDelete = idsToDelete[i];
+          elems = document.getElementsByClassName(idToDelete);
+          while(elems[0]) {
+            elems[0].parentNode.removeChild(elems[0]);
+          }
+        }
+
+        // Shrink scoreboard container to sm-4
+        var elem = document.getElementById('scoreboard-panels-container');
+        elem.classList.remove('col-sm-8');
+        elem.classList.add('col-sm-4');
+
       }
     },
 
@@ -1242,10 +1277,10 @@
       this.element.team3wlrec = document.getElementById("team3record");
       this.element.team4wlrec = document.getElementById("team4record");
 
-      this.element.team1wlrecCont = document.getElementById("team1record-container");
-      this.element.team2wlrecCont = document.getElementById("team2record-container");
-      this.element.team3wlrecCont = document.getElementById("team3record-container");
-      this.element.team4wlrecCont = document.getElementById("team4record-container");
+      this.element.team1rain = document.getElementById("team1rainbows");
+      this.element.team2rain = document.getElementById("team2rainbows");
+      this.element.team3rain = document.getElementById("team3rainbows");
+      this.element.team4rain = document.getElementById("team4rainbows");
 
       this.element.livepct    = document.getElementById('livePct');
       // this.element.territory1 = document.getElementById('territory1');
@@ -1484,6 +1519,14 @@
             GOL.handlers.buttons.step();
           }
 
+        } else if (event.keyCode === 70 ) { // Key: F
+          var speed = GOL.element.speedSlider.value;
+          speed = speed - 1;
+          if (speed===0) {
+            speed = 4;
+          }
+          GOL.element.speedSlider.value = speed;
+
         } else if (event.keyCode === 71 ) { // Key: G
           GOL.handlers.buttons.grid();
 
@@ -1502,11 +1545,11 @@
           // Update run/stop button state
           if (GOL.running) {
             GOL.nextStep();
-            document.getElementById('buttonRun').textContent = 'Stop';
+            document.getElementById('buttonRun').innerHTML = '<u>S</u>top';
             document.getElementById('buttonRun').classList.remove("btn-success");
             document.getElementById('buttonRun').classList.add("btn-danger");
           } else {
-            document.getElementById('buttonRun').textContent = 'Run';
+            document.getElementById('buttonRun').innerHTML = '<u>R</u>un';
             document.getElementById('buttonRun').classList.remove("btn-danger");
             document.getElementById('buttonRun').classList.add("btn-success");
           }
