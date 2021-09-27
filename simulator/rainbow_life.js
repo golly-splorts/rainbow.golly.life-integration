@@ -150,7 +150,7 @@
       z3lab: null,
       z4lab: null,
       mapName: null,
-      mapScoreboardPanel: null,
+      mapPanel: null,
     },
 
     // Initial state
@@ -635,7 +635,7 @@
         this.element.z4lab.innerHTML = this.mapZone4Name;
       } else {
         // Remove the Map line from the scoreboard
-        this.element.mapScoreboardPanel.remove();
+        this.element.mapPanel.remove();
         this.element.z1lab.remove();
         this.element.z2lab.remove();
         this.element.z3lab.remove();
@@ -1302,7 +1302,7 @@
       this.element.colorButton = document.getElementById('buttonColors');
 
       this.element.mapName = document.getElementById('mapname-label');
-      this.element.mapScoreboardPanel = document.getElementById('scoreboard-panel-map');
+      this.element.mapPanel = document.getElementById('stats-panel-map');
 
       this.element.speedSlider = document.getElementById('speed-slider');
 
