@@ -29,6 +29,14 @@
     // this may duplicate / between the base url and simulator
     baseSimulatorUrl : getBaseUIUrl() + '/simulator/index.html',
 
+    simulatorDivIds : [
+      'container-golly-header',
+      'container-golly-controls',
+      'container-canvas',
+      'container-golly-frontmatter',
+      'container-loading'
+    ],
+
     // 1 acorn apiece
     //s1Default: '[{"50":[60]},{"51":[62]},{"52":[59,60,63,64,65]}]',
     //s2Default: '[{"60":[60]},{"61":[62]},{"62":[59,60,63,64,65]}]',
@@ -185,7 +193,26 @@
         // They were moved to inside the loadState() function.
       } catch (e) {
         console.log(e);
+        this.error(-1);
       }
+    },
+
+    error : function(mode) {
+
+      // Hide elements
+      for (var c in this.simulatorDivIds) {
+        try {
+          var elem = document.getElementById(this.simulatorDivIds[c]);
+          elem.classList.add('invisible');
+        } catch (e) {
+          // do nothing
+        }
+      }
+
+      // Show error 
+      var container = document.getElementById('container-error');
+      container.classList.remove("invisible");
+
     },
 
     loading : function() {
@@ -384,7 +411,10 @@
           this.prepare()
 
         })
-        .catch(err => { throw err });
+        .catch(err => { 
+          this.error(-1);
+          //throw err 
+        });
         // Done loading game from /game API endpoint
 
       } else if (this.patternName != null) {
@@ -443,7 +473,10 @@
           this.prepare()
 
         })
-        .catch(err => { throw err });
+        .catch(err => { 
+          this.error(-1);
+          //throw err 
+        });
         // Done loading pattern from /map API endpoint
 
       } else {
